@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wanderly Travel — Explore the World</title>
+
+  <style>
+    :root{
+      --accent:#0077cc;
+      --muted:#6b7280;
+      --card:#ffffff;
+      --bg:#f3f7fb;
+      --radius:14px;
+      --gap:16px;
+      --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+      background:var(--bg);
+      color:#0f172a;
+      line-height:1.45;
+    }
+    .wrap{max-width:var(--maxw);margin:32px auto;padding:0 20px;}
+
+    /* HEADER & NAV */
+    header{
+      background:linear-gradient(90deg,var(--accent),#005fa3);
+      color:white;padding:18px;border-radius:18px;
+      box-shadow:0 6px 20px rgba(3,55,102,0.12);
+      position:sticky;top:0;z-index:99;
+    }
+    .header-row{
+      display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;
+    }
+    .brand{display:flex;align-items:center;gap:10px;}
+    .logo{
+      width:52px;height:52px;border-radius:10px;background:rgba(255,255,255,0.15);
+      display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px;
+    }
+    nav a{
+      color:white;text-decoration:none;margin:0 12px;font-weight:600;
+    }
+
+    /* SECTIONS */
+    section{margin-top:40px}
+    .section-title{
+      font-size:28px;font-weight:700;margin-bottom:8px;text-align:center;
+    }
+    .sub-text{text-align:center;color:var(--muted);max-width:600px;margin:0 auto 20px}
+
+    /* HERO */
+    .hero{
+      background:white;padding:26px;border-radius:16px;
+      box-shadow:0 8px 20px rgba(9,30,63,0.06);
+      text-align:center;margin-top:24px;
+    }
+    .hero h1{margin:0;font-size:32px}
+    .hero p{color:var(--muted);margin-top:8px}
+    .search{
+      display:flex;gap:10px;margin:18px auto;max-width:480px;
+    }
+    .search input{
+      flex:1;padding:10px;border:1px solid #cdd9e8;border-radius:10px;
+    }
+    .search button{
+      padding:10px 14px;background:var(--accent);color:white;border:none;border-radius:10px;font-weight:700;cursor:pointer;
+    }
+
+    /* DESTINATIONS GRID */
+    .grid{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:18px;margin-top:14px;
+    }
+    .card{
+      background:white;padding:14px;border-radius:14px;
+      box-shadow:0 8px 20px rgba(9,30,63,0.07);
+    }
+    .thumb{
+      height:140px;border-radius:10px;background-size:cover;background-position:center;
+    }
+    .card h3{margin:10px 0 6px}
+    .card p{margin:0;color:var(--muted)}
+    .cta{margin-top:10px;display:flex;gap:10px}
+    .btn{padding:8px 12px;border-radius:10px;border:none;cursor:pointer;font-weight:700}
+    .btn-outline{border:1px solid #d9e6f5;background:white;color:var(--accent)}
+    .btn-primary{background:var(--accent);color:white}
+
+    /* ABOUT SECTION */
+    .about-card{
+      background:white;padding:20px;border-radius:16px;
+      box-shadow:0 8px 20px rgba(9,30,63,0.06);
+      max-width:800px;margin:0 auto;
+    }
+    .team{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:14px;margin-top:12px;
+    }
+    .member{
+      padding:12px;background:#fafdff;border-radius:10px;
+      box-shadow:0 6px 16px rgba(0,0,0,0.05);
+    }
+
+    /* CONTACT SECTION */
+    .contact-card{
+      background:white;padding:20px;border-radius:16px;
+      box-shadow:0 8px 20px rgba(9,30,63,0.06);
+      max-width:700px;margin:0 auto;
+    }
+
+    /* FOOTER */
+    footer{
+      margin-top:30px;text-align:center;font-size:14px;color:var(--muted);padding-bottom:20px;
+    }
+
+    @media(max-width:620px){
+      .search{flex-direction:column}
+      .search button{width:100%}
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="wrap">
+
+  <!-- NAVIGATION -->
+  <header>
+    <div class="header-row">
+      <div class="brand">
+        <div class="logo">W</div>
+        <strong>Wanderly Travel</strong>
+      </div>
+
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#packages">Packages</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home">
+    <div class="hero">
+      <h1>Explore the World with Wanderly 🌍</h1>
+      <p>Your gateway to beaches, mountains, luxury escapes & adventures.</p>
+
+      <div class="search">
+        <input type="text" placeholder="Search destination (Goa, Dubai, Manali)" />
+        <button>Search</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PACKAGES -->
+  <section id="packages">
+    <div class="section-title">Travel Packages</div>
+    <p class="sub-text">Handpicked destinations designed to fit every mood and budget</p>
+
+    <div class="grid">
+
+      <div class="card">
+        <div class="thumb" style="background-image:url('https://picsum.photos/id/1018/800/500');"></div>
+        <h3>Goa — Sun & Sea (4 nights)</h3>
+        <p>₹9,999 · Beach resorts · Water sports</p>
+        <div class="cta">
+          <button class="btn btn-outline">View</button>
+          <button class="btn btn-primary">Book</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="thumb" style="background-image:url('https://picsum.photos/id/1036/800/500');"></div>
+        <h3>Manali — Mountain Escape (3 nights)</h3>
+        <p>₹7,499 · Trekking · Adventure activities</p>
+        <div class="cta">
+          <button class="btn btn-outline">View</button>
+          <button class="btn btn-primary">Book</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="thumb" style="background-image:url('https://picsum.photos/id/1025/800/500');"></div>
+        <h3>Dubai — City & Desert (4 nights)</h3>
+        <p>₹29,999 · Desert safari · City tour</p>
+        <div class="cta">
+          <button class="btn btn-outline">View</button>
+          <button class="btn btn-primary">Book</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="thumb" style="background-image:url('https://picsum.photos/id/1043/800/500');"></div>
+        <h3>Maldives — Luxury Retreat (5 nights)</h3>
+        <p>₹49,999 · Overwater villas · Spa</p>
+        <div class="cta">
+          <button class="btn btn-outline">View</button>
+          <button class="btn btn-primary">Book</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <div class="section-title">About Us</div>
+    <p class="sub-text">A trusted travel agency crafting journeys since 2010</p>
+
+    <div class="about-card">
+      <p>
+        Wanderly Travel creates safe, comfortable, and memorable travel experiences across India and abroad.
+        We focus on quality stays, curated itineraries, and 24×7 customer support.
+      </p>
+
+      <h3>Our Team</h3>
+      <div class="team">
+        <div class="member">
+          <strong>Asha — Founder</strong>
+          <p style="color:var(--muted)">15+ years crafting premium travel experiences.</p>
+        </div>
+
+        <div class="member">
+          <strong>Rohan — Operations</strong>
+          <p style="color:var(--muted)">Logistics, bookings, and coordination expert.</p>
+        </div>
+
+        <div class="member">
+          <strong>Neha — Customer Support</strong>
+          <p style="color:var(--muted)">Your dedicated travel concierge 24×7.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <div class="section-title">Contact Us</div>
+    <p class="sub-text">We’re available round the clock for your travel needs</p>
+
+    <div class="contact-card">
+      <p><strong>Email:</strong> hello@wanderly.example</p>
+      <p><strong>Phone:</strong> +91 98765 43210</p>
+      <p><strong>Address:</strong> Mumbai, India</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © <span id="year"></span> Wanderly Travel — All Rights Reserved
+  </footer>
+
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
